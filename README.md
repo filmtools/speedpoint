@@ -4,6 +4,12 @@
 
 **Interfaces, classes and decorators for the speed point of a film developing.**
 
+## Installation
+
+```bash
+$ composer require filmtools/speedpoint
+```
+
 
 
 ## Interfaces and Classes
