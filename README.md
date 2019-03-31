@@ -64,3 +64,13 @@ $sp->getType();         // "Description", may be null.
 
 
 
+## Development and Testing
+
+```
+$ git clone https://github.com/filmtools/speedpoint.git
+$ cd speedpoint
+$ composer install
+
+$ composer test
+```
+
