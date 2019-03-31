@@ -4,6 +4,14 @@
 
 **Interfaces, classes and decorators for the speed point of a film developing.**
 
+[![Packagist](https://img.shields.io/packagist/v/filmtools/filmspeed.svg?style=flat)](https://packagist.org/packages/filmtools/filmspeed)
+[![PHP version](https://img.shields.io/packagist/php-v/filmtools/filmspeed.svg)](https://packagist.org/packages/filmtools/filmspeed)
+[![Build Status](https://img.shields.io/travis/filmtools/filmspeed.svg?label=Travis%20CI)](https://travis-ci.org/filmtools/filmspeed)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/filmtools/filmspeed/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/filmtools/filmspeed/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/filmtools/filmspeed/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/filmtools/filmspeed/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/filmtools/filmspeed/badges/build.png?b=master)](https://scrutinizer-ci.com/g/filmtools/filmspeed/build-status/master)
+
+
 ## Installation
 
 ```bash
