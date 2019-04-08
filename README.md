@@ -40,7 +40,7 @@ Returns the speed point exposure value which yields a certain minimum density.
 Returns the difference between the real speed point and the exposure value where the minimum density had been expected.
 
 **getEICorrection() :** *float*
-Converts the "speed loss" to Exposure Index (°DIN) steps.
+Converts the "speed loss" to Exposure Index (°DIN) steps. The correction value is negative when the film needs “more light”.
 
 
 
@@ -72,7 +72,7 @@ $sp = new SpeedPoint( $logH, "Description" );
 // Examples:
 $sp->getValue();        // 0.46
 $sp->getSpeedLoss();    // 0.16
-$sp->getEICorrection(); // 3.0
+$sp->getEICorrection(); // -3.0
 $sp->getType();         // "Description", may be null.
 ```
 
