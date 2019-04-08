@@ -56,7 +56,7 @@ abstract class SpeedPointAbstract implements SpeedPointInterface
      */
     public function getEICorrection() : float
     {
-        return $this->getSpeedLoss() * 10;
+        return $this->getSpeedLoss() * 10 * -1;
     }
 
 }
