@@ -27,8 +27,8 @@ class SpeedPoint extends SpeedPointAbstract implements SpeedPointInterface, Spee
     public function __debugInfo() : array
     {
         return [
-            'type'          => $this->getType(),
-            'value'         => $this->getValue(),
+            'type'          => $this->type,
+            'value'         => $this->value,
             'speed_loss'    => $this->getSpeedLoss(),
             'ei_correction' => $this->getEICorrection()
         ];

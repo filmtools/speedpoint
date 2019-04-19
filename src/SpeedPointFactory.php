@@ -26,13 +26,14 @@ class SpeedPointFactory
     }
 
     /**
-     * @param  float      $logH       Exposure value
-     * @param  string|null $php_class  Optional: FQDN of a SpeedPoint class
+     * @param  float      $logH          Exposure value
+     * @param  string|null $php_class    Optional: FQDN of a SpeedPoint class
+     * @param  string|null $description  Optional: Custom SpeedPoint description for the new object
      * @return SpeedPointInterface
      */
-    public function __invoke( float $logH, ?string $php_class = null )
+    public function __invoke( float $logH, ?string $php_class = null, ?string $description = null )
     {
         $php_class = $php_class ?: $this->php_class;
-        return new $php_class( $logH, $this->speedpoint_type );
+        return new $php_class( $logH, $description ?: $this->speedpoint_type );
     }
 }
