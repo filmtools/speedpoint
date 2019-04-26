@@ -17,6 +17,11 @@ class SpeedPointTest extends \PHPUnit\Framework\TestCase
         $this->assertInstanceOf( SpeedPointInterface::class, $sut);
         $this->assertInstanceOf( SpeedPointProviderInterface::class, $sut);
         $this->assertInstanceOf( SpeedPointInterface::class, $sut->getSpeedPoint() );
+        $this->assertTrue( $sut->valid() );
+
+        $debug_info = $sut->__debugInfo();
+        $this->assertTrue($debug_info['valid'] );
+
     }
 
     public function provideCtorArgs()
@@ -25,6 +30,16 @@ class SpeedPointTest extends \PHPUnit\Framework\TestCase
             [ 0.5, "SomeType" ],
             [ 0.5, null ]
         ];
+    }
+
+
+    public function testValid()
+    {
+        $sut = new SpeedPoint(null, null);
+        $this->assertFalse( $sut->valid() );
+
+        $debug_info = $sut->__debugInfo();
+        $this->assertFalse($debug_info['valid'] );
     }
 
 

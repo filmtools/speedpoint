@@ -16,6 +16,13 @@ abstract class SpeedPointAbstract implements SpeedPointInterface
 
 
 
+    /**
+     * @inheritDoc
+     */
+    public function valid() : bool
+    {
+        return !is_null($value = $this->getValue());
+    }
 
 
     /**
@@ -30,7 +37,7 @@ abstract class SpeedPointAbstract implements SpeedPointInterface
     /**
      * inheritDoc
      */
-    public function getValue() : float
+    public function getValue() : ?float
     {
         return $this->value;
     }
@@ -42,9 +49,11 @@ abstract class SpeedPointAbstract implements SpeedPointInterface
      *
      * inheritDoc
      */
-    public function getSpeedLoss() : float
+    public function getSpeedLoss() : ?float
     {
-        return $this->getValue() - log10(2);
+        if (!is_null($value = $this->getValue()))
+            return $value - log10(2);
+        return null;
     }
 
 
@@ -54,9 +63,11 @@ abstract class SpeedPointAbstract implements SpeedPointInterface
      *
      * inheritDoc
      */
-    public function getEICorrection() : float
+    public function getEICorrection() : ?float
     {
-        return $this->getSpeedLoss() * 10 * -1;
+        if (!is_null($speedloss = $this->getSpeedLoss()))
+            return $speedloss * 10 * -1;
+        return null;
     }
 
 }

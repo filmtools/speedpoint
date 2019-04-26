@@ -5,6 +5,12 @@ interface SpeedPointInterface
 {
 
     /**
+     * Returns true if the speedpoint value is valid.
+     */
+    public function valid() : bool;
+
+
+    /**
      * Returns name or description (film speed evaluation method).
      */
     public function getType() : ?string;
@@ -16,7 +22,7 @@ interface SpeedPointInterface
      *
      * @return float
      */
-    public function getValue() : float;
+    public function getValue() : ?float;
 
 
 
@@ -26,7 +32,7 @@ interface SpeedPointInterface
      *
      * @return float
      */
-    public function getSpeedLoss() : float;
+    public function getSpeedLoss() : ?float;
 
 
 
@@ -35,5 +41,5 @@ interface SpeedPointInterface
      *
      * @return float
      */
-    public function getEICorrection() : float;
+    public function getEICorrection() : ?float;
 }

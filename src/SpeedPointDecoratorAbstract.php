@@ -40,6 +40,15 @@ abstract class SpeedPointDecoratorAbstract implements SpeedPointProviderInterfac
     /**
      * @inheritDoc
      */
+    public function valid() : bool
+    {
+        return $this->speedpoint->valid();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
     public function getType() : ?string
     {
         return $this->speedpoint->getType();
@@ -49,7 +58,7 @@ abstract class SpeedPointDecoratorAbstract implements SpeedPointProviderInterfac
     /**
      * @inheritDoc
      */
-    public function getValue() : float
+    public function getValue() : ?float
     {
         return $this->speedpoint->getValue();
     }
@@ -58,7 +67,7 @@ abstract class SpeedPointDecoratorAbstract implements SpeedPointProviderInterfac
     /**
      * @inheritDoc
      */
-    public function getSpeedLoss() : float
+    public function getSpeedLoss() : ?float
     {
         return $this->speedpoint->getSpeedLoss();
     }
@@ -67,7 +76,7 @@ abstract class SpeedPointDecoratorAbstract implements SpeedPointProviderInterfac
     /**
      * @inheritDoc
      */
-    public function getEICorrection() : float
+    public function getEICorrection() : ?float
     {
         return $this->speedpoint->getEICorrection();
     }

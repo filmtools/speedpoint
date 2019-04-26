@@ -8,7 +8,7 @@ class SpeedPoint extends SpeedPointAbstract implements SpeedPointInterface, Spee
      * @param float  $logH  Exposure value
      * @param string $type  Short description
      */
-    public function __construct( float $logH, ?string $type = null)
+    public function __construct( ?float $logH, ?string $type = null)
     {
         $this->value = $logH;
         $this->type = $type;
@@ -29,6 +29,7 @@ class SpeedPoint extends SpeedPointAbstract implements SpeedPointInterface, Spee
         return [
             'type'          => $this->type,
             'value'         => $this->value,
+            'valid'         => $this->valid(),
             'speed_loss'    => $this->getSpeedLoss(),
             'ei_correction' => $this->getEICorrection()
         ];

@@ -33,14 +33,17 @@ use FilmTools\SpeedPoint\SpeedPointInterface;
 **getType() :**  *string|null*
 Returns name or description (film speed evaluation method).
 
-**getValue() :** *float*
+**getValue() :** *float|null*
 Returns the speed point exposure value which yields a certain minimum density.
 
-**getSpeedLoss() :** *float*
+**getSpeedLoss() :** *float|null*
 Returns the difference between the real speed point and the exposure value where the minimum density had been expected.
 
-**getEICorrection() :** *float*
+**getEICorrection() :** *float|null*
 Converts the "speed loss" to Exposure Index (°DIN) steps. The correction value is negative when the film needs “more light”.
+
+**valid()** : *bool*
+Returns *true* if the value is valid.
 
 
 
