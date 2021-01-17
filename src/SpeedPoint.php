@@ -24,6 +24,9 @@ class SpeedPoint extends SpeedPointAbstract implements SpeedPointInterface, Spee
     }
 
 
+    /**
+     * @return mixed[]
+     */
     public function __debugInfo() : array
     {
         return [
