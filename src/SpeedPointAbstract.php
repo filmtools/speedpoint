@@ -5,12 +5,12 @@ abstract class SpeedPointAbstract implements SpeedPointInterface
 {
 
     /**
-     * @var float
+     * @var ?float
      */
     public $value;
 
     /**
-     * @var string
+     * @var ?string
      */
     public $type;
 

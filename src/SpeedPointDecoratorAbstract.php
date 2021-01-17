@@ -17,7 +17,7 @@ abstract class SpeedPointDecoratorAbstract implements SpeedPointProviderInterfac
     {
         if ($speedpoint instanceOf SpeedPointProviderInterface):
             $this->speedpoint = $speedpoint->getSpeedPoint();
-        elseif ($speedpoint_provider instanceOf SpeedPointInterface):
+        elseif ($speedpoint instanceOf SpeedPointInterface):
             $this->speedpoint = $speedpoint;
         else:
             throw new \InvalidArgumentException("SpeedPointInterface or SpeedPointProviderInterface expected");
