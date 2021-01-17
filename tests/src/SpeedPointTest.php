@@ -11,7 +11,7 @@ class SpeedPointTest extends \PHPUnit\Framework\TestCase
     /**
      * @dataProvider provideCtorArgs
      */
-    public function testInstantiation( $logH, $type)
+    public function testInstantiation( $logH, $type) : void
     {
         $sut = new SpeedPoint( $logH, $type );
         $this->assertInstanceOf( SpeedPointInterface::class, $sut);
@@ -24,7 +24,7 @@ class SpeedPointTest extends \PHPUnit\Framework\TestCase
 
     }
 
-    public function provideCtorArgs()
+    public function provideCtorArgs() : array
     {
         return [
             [ 0.5, "SomeType" ],
@@ -33,7 +33,7 @@ class SpeedPointTest extends \PHPUnit\Framework\TestCase
     }
 
 
-    public function testValid()
+    public function testValid() : void
     {
         $sut = new SpeedPoint(null, null);
         $this->assertFalse( $sut->valid() );
@@ -47,7 +47,7 @@ class SpeedPointTest extends \PHPUnit\Framework\TestCase
     /**
      * @dataProvider provideCtorArgs
      */
-    public function testGetters( $logH, $type)
+    public function testGetters( $logH, $type) : void
     {
         $sut = new SpeedPoint( $logH, $type );
 
