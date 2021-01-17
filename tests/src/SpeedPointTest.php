@@ -54,9 +54,9 @@ class SpeedPointTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals( $type, $sut->getType());
         $this->assertEquals( $logH, $sut->getValue());
 
-        $this->assertInternalType( "float", $sut->getSpeedLoss());
-        $this->assertInternalType( "float", $sut->getEICorrection());
-        $this->assertInternalType( "float", $sut->getValue());
+        $this->assertIsFloat( $sut->getSpeedLoss());
+        $this->assertIsFloat( $sut->getEICorrection());
+        $this->assertIsFloat( $sut->getValue());
     }
 
 
